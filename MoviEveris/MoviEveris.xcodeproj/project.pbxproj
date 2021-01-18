@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE10019225B6143700E0E9D2 /* MoviEverisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10019125B6143700E0E9D2 /* MoviEverisTests.swift */; };
 		DE12ABD825A73C7A00F2E0C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12ABD725A73C7A00F2E0C5 /* AppDelegate.swift */; };
 		DE12ABDD25A73C7A00F2E0C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE12ABDB25A73C7A00F2E0C5 /* Main.storyboard */; };
 		DE12ABDF25A73C7C00F2E0C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE12ABDE25A73C7C00F2E0C5 /* Assets.xcassets */; };
@@ -19,16 +20,24 @@
 		DEAE9F3D25AE359000B734AE /* DetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE9F3C25AE359000B734AE /* DetailMovieViewController.swift */; };
 		DEAE9F4025AE3C9500B734AE /* FilmeLista.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE9F3F25AE3C9500B734AE /* FilmeLista.swift */; };
 		DEAE9F4A25AF23BA00B734AE /* FilmeSimples.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE9F4925AF23BA00B734AE /* FilmeSimples.swift */; };
-		DEAE9F4F25AF270700B734AE /* MainViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE9F4E25AF270700B734AE /* MainViewData.swift */; };
-		DEAE9F5325AF29BE00B734AE /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE9F5225AF29BE00B734AE /* MainViewModel.swift */; };
-		DEAE9F5725AF2DB100B734AE /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE9F5625AF2DB100B734AE /* Poster.swift */; };
-		DEAE9F6025AF6DF600B734AE /* DetalheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE9F5F25AF6DF600B734AE /* DetalheViewModel.swift */; };
-		DEAE9F6325AF6E0600B734AE /* DetalheViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE9F6225AF6E0600B734AE /* DetalheViewData.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE10019425B6143700E0E9D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE12ABCC25A73C7A00F2E0C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE12ABD325A73C7A00F2E0C5;
+			remoteInfo = MoviEveris;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		40DB082DD17BBA55AF005290 /* Pods-MoviEveris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviEveris.release.xcconfig"; path = "Target Support Files/Pods-MoviEveris/Pods-MoviEveris.release.xcconfig"; sourceTree = "<group>"; };
 		50D868C4CC57A9647337C312 /* Pods-MoviEveris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviEveris.debug.xcconfig"; path = "Target Support Files/Pods-MoviEveris/Pods-MoviEveris.debug.xcconfig"; sourceTree = "<group>"; };
+		DE10018F25B6143700E0E9D2 /* MoviEverisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviEverisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE10019125B6143700E0E9D2 /* MoviEverisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviEverisTests.swift; sourceTree = "<group>"; };
+		DE10019325B6143700E0E9D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE12ABD425A73C7A00F2E0C5 /* MoviEveris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviEveris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE12ABD725A73C7A00F2E0C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE12ABDC25A73C7A00F2E0C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,14 +52,16 @@
 		DEAE9F3C25AE359000B734AE /* DetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = "<group>"; };
 		DEAE9F3F25AE3C9500B734AE /* FilmeLista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeLista.swift; sourceTree = "<group>"; };
 		DEAE9F4925AF23BA00B734AE /* FilmeSimples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeSimples.swift; sourceTree = "<group>"; };
-		DEAE9F4E25AF270700B734AE /* MainViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewData.swift; sourceTree = "<group>"; };
-		DEAE9F5225AF29BE00B734AE /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		DEAE9F5625AF2DB100B734AE /* Poster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
-		DEAE9F5F25AF6DF600B734AE /* DetalheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheViewModel.swift; sourceTree = "<group>"; };
-		DEAE9F6225AF6E0600B734AE /* DetalheViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DE10018C25B6143700E0E9D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE12ABD125A73C7A00F2E0C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,10 +81,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DE10019025B6143700E0E9D2 /* MoviEverisTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE10019125B6143700E0E9D2 /* MoviEverisTests.swift */,
+				DE10019325B6143700E0E9D2 /* Info.plist */,
+			);
+			path = MoviEverisTests;
+			sourceTree = "<group>";
+		};
 		DE12ABCB25A73C7A00F2E0C5 = {
 			isa = PBXGroup;
 			children = (
 				DE12ABD625A73C7A00F2E0C5 /* MoviEveris */,
+				DE10019025B6143700E0E9D2 /* MoviEverisTests */,
 				DE12ABD525A73C7A00F2E0C5 /* Products */,
 				242DE31E612BD9BB8C4C4987 /* Pods */,
 			);
@@ -83,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				DE12ABD425A73C7A00F2E0C5 /* MoviEveris.app */,
+				DE10018F25B6143700E0E9D2 /* MoviEverisTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,8 +140,6 @@
 			children = (
 				DEAE9F0B25AE151F00B734AE /* Filme.swift */,
 				DEAE9F3F25AE3C9500B734AE /* FilmeLista.swift */,
-				DEAE9F4925AF23BA00B734AE /* FilmeSimples.swift */,
-				DEAE9F5625AF2DB100B734AE /* Poster.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,10 +180,7 @@
 		DEAE9F4D25AF26D200B734AE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				DEAE9F5225AF29BE00B734AE /* MainViewModel.swift */,
-				DEAE9F4E25AF270700B734AE /* MainViewData.swift */,
-				DEAE9F5F25AF6DF600B734AE /* DetalheViewModel.swift */,
-				DEAE9F6225AF6E0600B734AE /* DetalheViewData.swift */,
+				DEAE9F4925AF23BA00B734AE /* FilmeSimples.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -171,6 +188,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DE10018E25B6143700E0E9D2 /* MoviEverisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE10019625B6143700E0E9D2 /* Build configuration list for PBXNativeTarget "MoviEverisTests" */;
+			buildPhases = (
+				DE10018B25B6143700E0E9D2 /* Sources */,
+				DE10018C25B6143700E0E9D2 /* Frameworks */,
+				DE10018D25B6143700E0E9D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE10019525B6143700E0E9D2 /* PBXTargetDependency */,
+			);
+			name = MoviEverisTests;
+			productName = MoviEverisTests;
+			productReference = DE10018F25B6143700E0E9D2 /* MoviEverisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DE12ABD325A73C7A00F2E0C5 /* MoviEveris */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE12ABE625A73C7C00F2E0C5 /* Build configuration list for PBXNativeTarget "MoviEveris" */;
@@ -196,10 +231,14 @@
 		DE12ABCC25A73C7A00F2E0C5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Mathias Almeida Nonohay";
 				TargetAttributes = {
+					DE10018E25B6143700E0E9D2 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = DE12ABD325A73C7A00F2E0C5;
+					};
 					DE12ABD325A73C7A00F2E0C5 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1230;
@@ -220,11 +259,19 @@
 			projectRoot = "";
 			targets = (
 				DE12ABD325A73C7A00F2E0C5 /* MoviEveris */,
+				DE10018E25B6143700E0E9D2 /* MoviEverisTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DE10018D25B6143700E0E9D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE12ABD225A73C7A00F2E0C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,28 +327,39 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DE10018B25B6143700E0E9D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE10019225B6143700E0E9D2 /* MoviEverisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE12ABD025A73C7A00F2E0C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEAE9F6025AF6DF600B734AE /* DetalheViewModel.swift in Sources */,
 				DEAE9F0725AE13AA00B734AE /* Bindable.swift in Sources */,
 				DE12ABD825A73C7A00F2E0C5 /* AppDelegate.swift in Sources */,
 				DE28C8A525A896440059625C /* FilmeCollectionViewCell.swift in Sources */,
-				DEAE9F4F25AF270700B734AE /* MainViewData.swift in Sources */,
 				DEAE9F3A25AE331500B734AE /* HomeViewController.swift in Sources */,
 				DEAE9F0F25AE158600B734AE /* MovieService.swift in Sources */,
 				DEAE9F0C25AE151F00B734AE /* Filme.swift in Sources */,
 				DEAE9F4A25AF23BA00B734AE /* FilmeSimples.swift in Sources */,
-				DEAE9F5725AF2DB100B734AE /* Poster.swift in Sources */,
 				DEAE9F4025AE3C9500B734AE /* FilmeLista.swift in Sources */,
 				DEAE9F3D25AE359000B734AE /* DetailMovieViewController.swift in Sources */,
-				DEAE9F6325AF6E0600B734AE /* DetalheViewData.swift in Sources */,
-				DEAE9F5325AF29BE00B734AE /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE10019525B6143700E0E9D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE12ABD325A73C7A00F2E0C5 /* MoviEveris */;
+			targetProxy = DE10019425B6143700E0E9D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DE12ABDB25A73C7A00F2E0C5 /* Main.storyboard */ = {
@@ -323,6 +381,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DE10019725B6143700E0E9D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MoviEverisTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.mathias.MoviEverisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoviEveris.app/MoviEveris";
+			};
+			name = Debug;
+		};
+		DE10019825B6143700E0E9D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MoviEverisTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.mathias.MoviEverisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoviEveris.app/MoviEveris";
+			};
+			name = Release;
+		};
 		DE12ABE425A73C7C00F2E0C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -480,6 +578,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DE10019625B6143700E0E9D2 /* Build configuration list for PBXNativeTarget "MoviEverisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE10019725B6143700E0E9D2 /* Debug */,
+				DE10019825B6143700E0E9D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DE12ABCF25A73C7A00F2E0C5 /* Build configuration list for PBXProject "MoviEveris" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

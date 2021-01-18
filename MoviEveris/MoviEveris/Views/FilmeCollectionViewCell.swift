@@ -12,7 +12,9 @@ import AlamofireImage
 
 class FilmeCollectionViewCell: UICollectionViewCell {
     
-    // MARK: - 
+    // MARK: - Atributos
+    
+    // MARK: - Outlet
     
     @IBOutlet weak var posterFilme: UIImageView!
     @IBOutlet weak var labelTitulo: UILabel!

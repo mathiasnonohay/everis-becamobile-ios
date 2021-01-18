@@ -10,35 +10,44 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    // MARK: - Outlet
+    
     @IBOutlet weak var colecaoFilmes: UICollectionView!
 
+    // MARK: - Atributos
     
-    var listaFilmes:[FilmeSimples] = []
+    var listaFilmesSimples = [FilmeSimples]()
     var posterPath: String = ""
     var paginaAtual = 1
     
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        colecaoFilmes.dataSource = self
-        colecaoFilmes.delegate = self
+        print(self.listaFilmesSimples.count)
         MovieService().getFilmesPopulares(self.paginaAtual) { (listaFilmes) in
-            self.listaFilmes = listaFilmes
+            self.listaFilmesSimples = listaFilmes.map({ return FilmeSimples(filme: $0)})
             self.colecaoFilmes.reloadData()
         } failure: { (error) in
             print(error)
         }
-        // Do any additional setup after loading the view.
+        colecaoFilmes.dataSource = self
+        colecaoFilmes.delegate = self
+
     }
     
+    // MARK: - Métodos
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listaFilmes.count
+        print("Quantidade de Filmes: ", listaFilmesSimples.count)
+        return listaFilmesSimples.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // método que coloca dados de poster e titulo nas células de filmes na primeira página
         let celulaFilme = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaFilme", for: indexPath) as! FilmeCollectionViewCell
         
-        let filmeAtual = listaFilmes[indexPath.item]
+        let filmeAtual = listaFilmesSimples[indexPath.item]
         
         guard let posterUrl = filmeAtual.backdropPath else { return celulaFilme }
         MovieService().getPosterFilme(posterUrl) { (imagem) in
@@ -54,10 +63,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let filme = listaFilmes[indexPath.item]
+        let filme = listaFilmesSimples[indexPath.item]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "detalhes") as! DetailMovieViewController
-        
         controller.filmeSelecionado = filme
         controller.paginaAtual = self.paginaAtual
         
@@ -65,22 +73,14 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
     }
     
-    // MARK: - Métodos
-    
-//    func recuperaPosteres() {
-//        //  Mostra os posteres dos filmes
-//        MovieService().getPosterFilme(self.posterPath) { (<#Image#>) in
-//            <#code#>
-//        }
-//
-//    }
+    // MARK: - Action
 
     @IBAction func paginaAnterior(_ sender: UIButton) {
         if self.paginaAtual > 1 {
             self.paginaAtual = self.paginaAtual - 1
             MovieService().getFilmesPopulares(self.paginaAtual) { (filmes) in
-                let listaFilmesAtual = filmes
-                self.listaFilmes = listaFilmesAtual
+                let listaFilmesAtual = filmes.map({ return FilmeSimples(filme: $0)})
+                self.listaFilmesSimples = listaFilmesAtual
                 self.colecaoFilmes.reloadData()
             } failure: { (error) in
                 print(error)
@@ -90,8 +90,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBAction func proximaPagina(_ sender: UIButton) {
         self.paginaAtual = self.paginaAtual + 1
         MovieService().getFilmesPopulares(self.paginaAtual) { (filmes) in
-            let listaFilmesAtual = filmes
-            self.listaFilmes = listaFilmesAtual
+            let listaFilmesAtual = filmes.map({ return FilmeSimples(filme: $0)})
+            self.listaFilmesSimples = listaFilmesAtual
             self.colecaoFilmes.reloadData()
         } failure: { (error) in
             print(error)
@@ -99,9 +99,4 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
 
 }
-//extension HomeViewController: MainViewModelDelegate {
-//    
-//    func reloadData(movie: MovieViewData) {
-//        movie.filmes.count
-//    }
-//}
+

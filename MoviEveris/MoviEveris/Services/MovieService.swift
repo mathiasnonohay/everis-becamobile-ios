@@ -11,31 +11,29 @@ import Alamofire
 import AlamofireImage
 import CoreData
 
-protocol MovieServiceProtocol {
-    func getFilmesPopulares (_ paginaToBe: Int, completionHandler: @escaping (_ filme: [FilmeSimples]) -> Void, failure: @escaping (_ error: Error) -> Void)
-    
-    func getPosterFilme(_ posterPath: String, completion: @escaping(_ posterFilme: Image) ->Void)
-    
-    func getFilmeDetalhe(_ id: Int, completionHandler: @escaping (FilmeSimples) -> Void, failure: @escaping  (Error) -> Void)
-}
+//protocol MovieServiceProtocol {
+//    func getFilmesPopulares (_ paginaToBe: Int, completionHandler: @escaping (_ filme: [FilmeSimples]) -> Void, failure: @escaping (_ error: Error) -> Void)
+//
+//    func getPosterFilme(_ posterPath: String, completion: @escaping(_ posterFilme: Image) ->Void)
+//
+//    func getFilmeDetalhe(_ id: Int, completionHandler: @escaping (FilmeSimples) -> Void, failure: @escaping  (Error) -> Void)
+//}
 
 
-class MovieService: MovieServiceProtocol {
+class MovieService {
     
     // MARK: - Atributos
     
     let apiKey = "96dd278d45abf85bc179831d48f22e83"
     let movieUrl = "https://api.themoviedb.org/"
     let imageUrl = "https://image.tmdb.org"
-    var filmeSelecionado:FilmeSimples? = nil
-    private var poster = [Poster]()
-    private var filmes = [FilmeSimples]()
-    private var filmeDetalhe = [FilmeSimples]()
+//    private var poster = [Poster]()
+    private var filmes = [Filme]()
 
     
     // MARK: - Métodos
     
-    func getFilmesPopulares(_ paginaToBe: Int, completionHandler: @escaping ([FilmeSimples]) -> Void, failure: @escaping  (Error) -> Void) {
+    func getFilmesPopulares(_ paginaToBe: Int, completionHandler: @escaping ([Filme]) -> Void, failure: @escaping  (Error) -> Void) {
         // Método para pegar os filmes popularesda semana
         Alamofire.request("\(movieUrl)3/trending/movie/week?api_key=\(apiKey)&language=pt-BR&page=\(paginaToBe)", method: .get).responseJSON { ( response ) in
             switch response.result {
@@ -55,14 +53,14 @@ class MovieService: MovieServiceProtocol {
             }
         }
     }
-    func getFilmeDetalhe(_ id: Int, completionHandler: @escaping (FilmeSimples) -> Void, failure: @escaping  (Error) -> Void) {
+    func getFilmeDetalhe(_ id: Int, completionHandler: @escaping (Filme) -> Void, failure: @escaping  (Error) -> Void) {
         // Método para pegar os filmes popularesda semana
         Alamofire.request("\(movieUrl)3/movie/\(id)?api_key=\(apiKey)&language=pt-BR", method: .get).responseJSON { ( response ) in
             switch response.result {
             case .success:
                 guard let dataFilme = response.data else { return }
                 do{
-                    let filme = try JSONDecoder().decode(FilmeSimples.self, from: dataFilme)
+                    let filme = try JSONDecoder().decode(Filme.self, from: dataFilme)
                     completionHandler(filme)
                 } catch {
                     print(error.localizedDescription)
@@ -92,22 +90,22 @@ class MovieService: MovieServiceProtocol {
     
     // MARK: - Contructor
     
-    init() {
-        
-        guard let id = filmeSelecionado?.id else { return }
-        debugPrint("Id Filme: \(id)")
-        guard let posterPath = filmeSelecionado?.posterPath else { return }
-        guard let titulo = filmeSelecionado?.title else { return }
-        guard let backdropPath = filmeSelecionado?.backdropPath else { return }
-        guard let sinopse = filmeSelecionado?.overview else { return }
-        guard let rating = filmeSelecionado?.voteAverage else { return }
-        guard let tituloOriginal = filmeSelecionado?.originalTitle else { return }
-        filmes.append(FilmeSimples(backdropPath: backdropPath, id: id, originalTitle: tituloOriginal, overview: sinopse, posterPath: posterPath, title: titulo, voteAverage: rating))
-        
-        getPosterFilme(posterPath) { (poster) in
-            self.poster.append(Poster(poster: poster))
-        }
-    }
+//    init() {
+//
+//        guard let id = filmeSelecionado?.id else { return }
+//        debugPrint("Id Filme: \(id)")
+//        guard let posterPath = filmeSelecionado?.posterPath else { return }
+//        guard let titulo = filmeSelecionado?.title else { return }
+//        guard let backdropPath = filmeSelecionado?.backdropPath else { return }
+//        guard let sinopse = filmeSelecionado?.overview else { return }
+//        guard let rating = filmeSelecionado?.voteAverage else { return }
+//        guard let tituloOriginal = filmeSelecionado?.originalTitle else { return }
+//        filmes.append(FilmeSimples(backdropPath: backdropPath, id: id, originalTitle: tituloOriginal, overview: sinopse, posterPath: posterPath, title: titulo, voteAverage: rating))
+//
+//        getPosterFilme(posterPath) { (poster) in
+//            self.poster.append(Poster(poster: poster))
+//        }
+//    }
     
     
 }

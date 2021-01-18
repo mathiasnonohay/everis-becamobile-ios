@@ -12,7 +12,7 @@ import Alamofire
 // MARK: - ListaFilmes
 struct ListaFilmes: Codable {
     let page: Int
-    let results: [FilmeSimples]
+    let results: [Filme]
     let totalPages, totalResults: Int
     
     enum CodingKeys: String, CodingKey {
