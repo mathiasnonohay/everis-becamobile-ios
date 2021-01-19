@@ -12,6 +12,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     // MARK: - Outlet
     
+    @IBOutlet weak var labelFilmesPopulares: UILabel!
     @IBOutlet weak var colecaoFilmes: UICollectionView!
 
     // MARK: - Atributos
@@ -31,10 +32,15 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         } failure: { (error) in
             print(error)
         }
+        setupAccessibilityHome()
         colecaoFilmes.dataSource = self
         colecaoFilmes.delegate = self
 
     }
+    
+    // MARK: - Accessibility
+    
+    
     
     // MARK: - Métodos
     
@@ -58,6 +64,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         celulaFilme.labelTitulo.text = titulo
         celulaFilme.configuraCelula(filmeAtual)
+        celulaFilme.setupAccessibilityCell()
         
         return celulaFilme
     }

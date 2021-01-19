@@ -19,8 +19,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JwS-IC-N2A">
                                 <rect key="frame" x="8" y="30" width="359" height="637"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filmes Populares da Semana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="das-RX-6Rz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filmes Populares da Semana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="das-RX-6Rz">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" header="YES"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="hPM-DZ-dIx"/>
                                         </constraints>
@@ -61,6 +64,9 @@
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFj-a1-WPA">
                                                             <rect key="frame" x="0.0" y="0.0" width="355" height="208"/>
+                                                            <accessibility key="accessibilityConfiguration">
+                                                                <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                            </accessibility>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="208" id="LTt-xv-22Z"/>
                                                             </constraints>
@@ -68,6 +74,9 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbZ-wu-Gh6">
                                                             <rect key="frame" x="0.0" y="163" width="353" height="45"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.56967037671232879" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <accessibility key="accessibilityConfiguration">
+                                                                <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            </accessibility>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="45" id="xeV-w2-OwA"/>
                                                             </constraints>
@@ -144,6 +153,7 @@
                     </view>
                     <connections>
                         <outlet property="colecaoFilmes" destination="aUD-kM-eeO" id="axV-va-CGE"/>
+                        <outlet property="labelFilmesPopulares" destination="das-RX-6Rz" id="MYM-ec-Sqk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTd-HJ-uKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -223,9 +233,11 @@
                                     <constraint firstAttribute="trailing" secondItem="gew-L4-Gja" secondAttribute="trailing" id="4EJ-EH-DtM"/>
                                     <constraint firstAttribute="trailing" secondItem="ecD-xb-ZLC" secondAttribute="trailing" id="D54-qU-ezx"/>
                                     <constraint firstItem="ecD-xb-ZLC" firstAttribute="leading" secondItem="kk6-8M-tTq" secondAttribute="leading" id="Etv-oR-I9r"/>
+                                    <constraint firstItem="w3t-eo-hH8" firstAttribute="leading" secondItem="kk6-8M-tTq" secondAttribute="leading" id="GNI-PW-5Nj"/>
                                     <constraint firstAttribute="bottom" secondItem="ecD-xb-ZLC" secondAttribute="bottom" id="Kzq-gq-noF"/>
                                     <constraint firstItem="ecD-xb-ZLC" firstAttribute="top" secondItem="nCz-vC-LNL" secondAttribute="bottom" id="V7I-cg-3b9"/>
                                     <constraint firstItem="gew-L4-Gja" firstAttribute="leading" secondItem="kk6-8M-tTq" secondAttribute="leading" id="f1s-M1-Bb9"/>
+                                    <constraint firstAttribute="trailing" secondItem="w3t-eo-hH8" secondAttribute="trailing" id="gaC-gQ-nDn"/>
                                     <constraint firstItem="jKx-5S-t0n" firstAttribute="leading" secondItem="kk6-8M-tTq" secondAttribute="leading" id="huI-fu-3Ma"/>
                                     <constraint firstItem="HIN-Yr-8w5" firstAttribute="top" secondItem="gew-L4-Gja" secondAttribute="bottom" id="kzH-YR-95W"/>
                                     <constraint firstAttribute="trailing" secondItem="jKx-5S-t0n" secondAttribute="trailing" id="tHb-u8-IQ5"/>
@@ -301,6 +313,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="botaoSair" destination="ecD-xb-ZLC" id="cK2-DK-CL3"/>
                         <outlet property="labelRating" destination="w3t-eo-hH8" id="4K8-xs-Fvr"/>
                         <outlet property="labelSinopse" destination="gew-L4-Gja" id="4UO-ax-0bV"/>
                         <outlet property="labelTitulo" destination="ln5-E4-jrL" id="cUb-33-ASg"/>

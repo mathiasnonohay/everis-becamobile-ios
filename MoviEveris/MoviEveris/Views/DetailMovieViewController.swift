@@ -18,6 +18,7 @@ class DetailMovieViewController: UIViewController {
     @IBOutlet weak var labelSinopse: UILabel!
     @IBOutlet weak var labelRating: UILabel!
     @IBOutlet weak var labelTituloOriginal: UILabel!
+    @IBOutlet weak var botaoSair: UIButton!
     
     var filmeSelecionado:FilmeSimples? = nil
     var paginaAtual = 1
@@ -25,9 +26,10 @@ class DetailMovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mostraFilme()
+        setupAccessibilityDetail()
     }
-
     
+    // MARK: - Métodos
 
     func mostraFilme() {
         guard let posterPath = filmeSelecionado?.posterPath else { return }
