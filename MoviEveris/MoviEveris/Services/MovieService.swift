@@ -11,17 +11,7 @@ import Alamofire
 import AlamofireImage
 import CoreData
 
-//protocol MovieServiceProtocol {
-//    func getFilmesPopulares (_ paginaToBe: Int, completionHandler: @escaping (_ filme: [FilmeSimples]) -> Void, failure: @escaping (_ error: Error) -> Void)
-//
-//    func getPosterFilme(_ posterPath: String, completion: @escaping(_ posterFilme: Image) ->Void)
-//
-//    func getFilmeDetalhe(_ id: Int, completionHandler: @escaping (FilmeSimples) -> Void, failure: @escaping  (Error) -> Void)
-//}
-
-
 class MovieService {
-    
     // MARK: - Atributos
     
     let apiKey = "96dd278d45abf85bc179831d48f22e83"
@@ -30,16 +20,14 @@ class MovieService {
 //    private var poster = [Poster]()
     private var filmes = [Filme]()
 
-    
     // MARK: - Métodos
-    
     func getFilmesPopulares(_ paginaToBe: Int, completionHandler: @escaping ([Filme]) -> Void, failure: @escaping  (Error) -> Void) {
         // Método para pegar os filmes popularesda semana
         Alamofire.request("\(movieUrl)3/trending/movie/week?api_key=\(apiKey)&language=pt-BR&page=\(paginaToBe)", method: .get).responseJSON { ( response ) in
             switch response.result {
             case .success:
                 guard let dataFilme = response.data else { return }
-                do{
+                do {
                     let filmes = try JSONDecoder().decode(ListaFilmes.self, from: dataFilme)
                     let listaFilmes = filmes.results
                     completionHandler(listaFilmes)
@@ -88,6 +76,3 @@ class MovieService {
         })
     }
 }
-
-
-

@@ -9,7 +9,7 @@
 import Foundation
 
 extension DetailMovieViewController {
-    // MARK: - Accessbility
+    // MARK: - AccessbilityDetail
     
     func setupAccessibilityDetail() {
         labelTitulo.accessibilityTraits = .header
@@ -22,7 +22,7 @@ extension DetailMovieViewController {
 }
 
 extension HomeViewController {
-    // MARK: - Accessibility
+    // MARK: - AccessibilityHome
     
     func setupAccessibilityHome() {
         
@@ -31,6 +31,8 @@ extension HomeViewController {
 }
 
 extension FilmeCollectionViewCell {
+    // MARK: - AccessibilityCélula
+    
     func setupAccessibilityCell() {
         labelTitulo.accessibilityHint = "Clique para ver detalhes"
     }

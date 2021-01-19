@@ -38,9 +38,5 @@ class MoviEverisTests: XCTestCase {
         // vamos testar se o filmeSimples
         
         XCTAssertEqual(filme.title, filmeSimples.title)
-        
     }
-    
-    
-
 }
