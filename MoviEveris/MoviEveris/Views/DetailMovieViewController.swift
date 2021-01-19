@@ -57,28 +57,3 @@ class DetailMovieViewController: UIViewController {
     }
 
 }
-
-//extension DetailMovieViewController: DetailViewModelDelegate {
-//
-//
-//    func reloadData(_ id: Int, movie: DetalheMovieViewData) {
-//        let id = movie.id as Int
-//        print(id)
-//        let posterPath = movie.posterPath as String
-//        let titulo = movie.title as String
-//        let sinopse = movie.overview as String
-//        let rating = movie.voteAverage as Double
-//        let tituloOriginal = movie.originalTitle as String
-//
-//        MovieService().getPosterFilme(posterPath) { (poster) in
-//            DetailMovieViewController().posterFilme.image = poster
-//            DetailMovieViewController().posterFilme.layer.cornerRadius = 10
-//            DetailMovieViewController().posterFilme.layer.masksToBounds = true
-//        }
-//
-//        DetailMovieViewController().labelTitulo.text = titulo
-//        DetailMovieViewController().labelSinopse.text = sinopse
-//        DetailMovieViewController().labelRating.text = "Nota: \(rating)"
-//        DetailMovieViewController().labelTituloOriginal.text = tituloOriginal
-//    }
-//}

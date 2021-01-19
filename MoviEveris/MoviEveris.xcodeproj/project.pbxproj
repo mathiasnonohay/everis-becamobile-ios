@@ -13,6 +13,11 @@
 		DE12ABDF25A73C7C00F2E0C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE12ABDE25A73C7C00F2E0C5 /* Assets.xcassets */; };
 		DE12ABE225A73C7C00F2E0C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE12ABE025A73C7C00F2E0C5 /* LaunchScreen.storyboard */; };
 		DE28C8A525A896440059625C /* FilmeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE28C8A425A896440059625C /* FilmeCollectionViewCell.swift */; };
+		DE473B4F25B710FF00910F87 /* HomeViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE473B4E25B710FF00910F87 /* HomeViewData.swift */; };
+		DE473B5725B7113700910F87 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE473B5625B7113700910F87 /* HomeViewModel.swift */; };
+		DE473B5B25B712C800910F87 /* DetalhesViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE473B5A25B712C800910F87 /* DetalhesViewData.swift */; };
+		DE473B5F25B712D300910F87 /* DetalhesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE473B5E25B712D300910F87 /* DetalhesViewModel.swift */; };
+		DE473B6325B712EF00910F87 /* FilmeCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE473B6225B712EF00910F87 /* FilmeCollectionViewCellModel.swift */; };
 		DEAE9F0725AE13AA00B734AE /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE9F0625AE13AA00B734AE /* Bindable.swift */; };
 		DEAE9F0C25AE151F00B734AE /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE9F0B25AE151F00B734AE /* Filme.swift */; };
 		DEAE9F0F25AE158600B734AE /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE9F0E25AE158600B734AE /* MovieService.swift */; };
@@ -33,8 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40DB082DD17BBA55AF005290 /* Pods-MoviEveris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviEveris.release.xcconfig"; path = "Target Support Files/Pods-MoviEveris/Pods-MoviEveris.release.xcconfig"; sourceTree = "<group>"; };
-		50D868C4CC57A9647337C312 /* Pods-MoviEveris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviEveris.debug.xcconfig"; path = "Target Support Files/Pods-MoviEveris/Pods-MoviEveris.debug.xcconfig"; sourceTree = "<group>"; };
+		D1F3554FA89CD400E7E6DB29 /* Pods-MoviEveris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviEveris.debug.xcconfig"; path = "Target Support Files/Pods-MoviEveris/Pods-MoviEveris.debug.xcconfig"; sourceTree = "<group>"; };
 		DE10018F25B6143700E0E9D2 /* MoviEverisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviEverisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE10019125B6143700E0E9D2 /* MoviEverisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviEverisTests.swift; sourceTree = "<group>"; };
 		DE10019325B6143700E0E9D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +49,11 @@
 		DE12ABE125A73C7C00F2E0C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE12ABE325A73C7C00F2E0C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE28C8A425A896440059625C /* FilmeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE473B4E25B710FF00910F87 /* HomeViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewData.swift; sourceTree = "<group>"; };
+		DE473B5625B7113700910F87 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DE473B5A25B712C800910F87 /* DetalhesViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViewData.swift; sourceTree = "<group>"; };
+		DE473B5E25B712D300910F87 /* DetalhesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViewModel.swift; sourceTree = "<group>"; };
+		DE473B6225B712EF00910F87 /* FilmeCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeCollectionViewCellModel.swift; sourceTree = "<group>"; };
 		DEAE9F0625AE13AA00B734AE /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		DEAE9F0B25AE151F00B734AE /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
 		DEAE9F0E25AE158600B734AE /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
@@ -52,6 +61,7 @@
 		DEAE9F3C25AE359000B734AE /* DetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = "<group>"; };
 		DEAE9F3F25AE3C9500B734AE /* FilmeLista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeLista.swift; sourceTree = "<group>"; };
 		DEAE9F4925AF23BA00B734AE /* FilmeSimples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeSimples.swift; sourceTree = "<group>"; };
+		F9DD6F9BE6823B02E76290F2 /* Pods-MoviEveris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviEveris.release.xcconfig"; path = "Target Support Files/Pods-MoviEveris/Pods-MoviEveris.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +85,8 @@
 		242DE31E612BD9BB8C4C4987 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				50D868C4CC57A9647337C312 /* Pods-MoviEveris.debug.xcconfig */,
-				40DB082DD17BBA55AF005290 /* Pods-MoviEveris.release.xcconfig */,
+				D1F3554FA89CD400E7E6DB29 /* Pods-MoviEveris.debug.xcconfig */,
+				F9DD6F9BE6823B02E76290F2 /* Pods-MoviEveris.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -180,6 +190,11 @@
 		DEAE9F4D25AF26D200B734AE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DE473B4E25B710FF00910F87 /* HomeViewData.swift */,
+				DE473B5625B7113700910F87 /* HomeViewModel.swift */,
+				DE473B5A25B712C800910F87 /* DetalhesViewData.swift */,
+				DE473B5E25B712D300910F87 /* DetalhesViewModel.swift */,
+				DE473B6225B712EF00910F87 /* FilmeCollectionViewCellModel.swift */,
 				DEAE9F4925AF23BA00B734AE /* FilmeSimples.swift */,
 			);
 			path = ViewModel;
@@ -210,11 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE12ABE625A73C7C00F2E0C5 /* Build configuration list for PBXNativeTarget "MoviEveris" */;
 			buildPhases = (
-				B5573BF52D364EA31AABAB5D /* [CP] Check Pods Manifest.lock */,
+				621CF1D8B554A36988D2F098 /* [CP] Check Pods Manifest.lock */,
 				DE12ABD025A73C7A00F2E0C5 /* Sources */,
 				DE12ABD125A73C7A00F2E0C5 /* Frameworks */,
 				DE12ABD225A73C7A00F2E0C5 /* Resources */,
-				6AF1096EBE76BAB12AF1AADE /* [CP] Embed Pods Frameworks */,
+				1D44EE847D23FC00B5049003 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,7 +300,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6AF1096EBE76BAB12AF1AADE /* [CP] Embed Pods Frameworks */ = {
+		1D44EE847D23FC00B5049003 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,7 +317,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoviEveris/Pods-MoviEveris-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B5573BF52D364EA31AABAB5D /* [CP] Check Pods Manifest.lock */ = {
+		621CF1D8B554A36988D2F098 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,11 +355,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAE9F0725AE13AA00B734AE /* Bindable.swift in Sources */,
+				DE473B5725B7113700910F87 /* HomeViewModel.swift in Sources */,
+				DE473B6325B712EF00910F87 /* FilmeCollectionViewCellModel.swift in Sources */,
+				DE473B5F25B712D300910F87 /* DetalhesViewModel.swift in Sources */,
 				DE12ABD825A73C7A00F2E0C5 /* AppDelegate.swift in Sources */,
 				DE28C8A525A896440059625C /* FilmeCollectionViewCell.swift in Sources */,
 				DEAE9F3A25AE331500B734AE /* HomeViewController.swift in Sources */,
 				DEAE9F0F25AE158600B734AE /* MovieService.swift in Sources */,
+				DE473B4F25B710FF00910F87 /* HomeViewData.swift in Sources */,
 				DEAE9F0C25AE151F00B734AE /* Filme.swift in Sources */,
+				DE473B5B25B712C800910F87 /* DetalhesViewData.swift in Sources */,
 				DEAE9F4A25AF23BA00B734AE /* FilmeSimples.swift in Sources */,
 				DEAE9F4025AE3C9500B734AE /* FilmeLista.swift in Sources */,
 				DEAE9F3D25AE359000B734AE /* DetailMovieViewController.swift in Sources */,
@@ -541,7 +561,7 @@
 		};
 		DE12ABE725A73C7C00F2E0C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50D868C4CC57A9647337C312 /* Pods-MoviEveris.debug.xcconfig */;
+			baseConfigurationReference = D1F3554FA89CD400E7E6DB29 /* Pods-MoviEveris.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -553,13 +573,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mathias.MoviEveris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		DE12ABE825A73C7C00F2E0C5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40DB082DD17BBA55AF005290 /* Pods-MoviEveris.release.xcconfig */;
+			baseConfigurationReference = F9DD6F9BE6823B02E76290F2 /* Pods-MoviEveris.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -571,7 +591,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mathias.MoviEveris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

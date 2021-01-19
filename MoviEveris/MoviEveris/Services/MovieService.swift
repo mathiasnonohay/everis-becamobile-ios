@@ -87,27 +87,6 @@ class MovieService {
             }
         })
     }
-    
-    // MARK: - Contructor
-    
-//    init() {
-//
-//        guard let id = filmeSelecionado?.id else { return }
-//        debugPrint("Id Filme: \(id)")
-//        guard let posterPath = filmeSelecionado?.posterPath else { return }
-//        guard let titulo = filmeSelecionado?.title else { return }
-//        guard let backdropPath = filmeSelecionado?.backdropPath else { return }
-//        guard let sinopse = filmeSelecionado?.overview else { return }
-//        guard let rating = filmeSelecionado?.voteAverage else { return }
-//        guard let tituloOriginal = filmeSelecionado?.originalTitle else { return }
-//        filmes.append(FilmeSimples(backdropPath: backdropPath, id: id, originalTitle: tituloOriginal, overview: sinopse, posterPath: posterPath, title: titulo, voteAverage: rating))
-//
-//        getPosterFilme(posterPath) { (poster) in
-//            self.poster.append(Poster(poster: poster))
-//        }
-//    }
-    
-    
 }
 
 
